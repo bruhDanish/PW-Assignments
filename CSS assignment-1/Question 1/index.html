@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q1 Different ways to add CSS</title>
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Internal CSS-->
+    <style>
+      body {
+        background-color: rgb(31, 46, 52);
+      }
+      h1 {
+        color: red;
+      }
+      p {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- inline css starts here -->
+    <div class="inline-css">
+      <h1 style="color: blue">Inline CSS</h1>
+      <p style="color: yellow">This is a paragraph with inline CSS</p>
+
+      <!-- these elements have been targeted by both inline and internal css directly, it shows that the inline css has the highest priority of all-->
+    </div>
+    <!-- inline css ends here -->
+
+    <!-- internal css starts here -->
+    <div class="internal-css">
+      <h1>Internal CSS</h1>
+      <p>This is a paragraph with internal CSS</p>
+    </div>
+    <!-- internal css ends here -->
+
+    <!-- external css starts here -->
+    <div class="external-css">
+      <h1>External CSS</h1>
+      <p>This is a paragraph with external CSS</p>
+
+      <!-- external css has the lowest priority as compared to inline and internal css, we can conclude this as I had to target both the elements above with the class name of the parent div-->
+    </div>
+    <!-- external css ends here -->
+  </body>
+</html>

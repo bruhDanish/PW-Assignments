@@ -1,10 +1,16 @@
+/* showed how to apply opacity on line number 90 and 113 */
+
+/* added background color to input field on line number 77 */
+
 :root{
+    /* Custom color palette made for different form elements */ 
     --primary-color: #8ab2b3;
     --secondary-color: #7caeaf;
     --tertiary-color: #6b9da0;
     --dark-color: #00000057;
     --light-color: #f5f5f5;
     --text-color: #ffffff;
+    --inputFeild-color: #5f808193;
 }
 
 *{
@@ -68,12 +74,21 @@ body{
 }   
 
 .form-group input{
+    background-color: var(--inputFeild-color); /* added background color to input field*/
+    color: var(--text-color);
+    font-weight: 600;
     padding: .8rem 0.5rem;
     border: none;
     border-radius: 4px;
     outline: none;
     transition: box-shadow 300ms linear;
     
+}
+
+.form-group input::placeholder{
+    color: var(--text-color);
+    opacity: 40%; /* this how we can apply opacity while using custom color palette*/
+    font-weight: normal;
 }
 
 .form-group input:hover{
@@ -95,9 +110,11 @@ body{
     background-color: var(--secondary-color);
     box-shadow: 0 5px 5px var(--dark-color);
     transition: box-shadow 100ms linear;
+    opacity: 40%; /* this how we can apply opacity while using custom color palette*/
 }
 
 .form-group button:hover{
     background-color: var(--tertiary-color);
     box-shadow: none;
+    opacity: 100%;
 }

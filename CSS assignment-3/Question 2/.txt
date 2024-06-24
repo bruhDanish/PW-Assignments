@@ -1,0 +1,11 @@
+Absolute and relative positioning are two ways to control the placement of elements on a web page, but they go about it in different ways:
+
+    Relative Positioning:
+        An element with relative positioning stays in its normal place in the document flow (along with text and other elements).
+        You can then move the element a certain distance relative to its original position using properties like top, right, bottom, and left.
+        Other elements on the page will still flow around the relatively positioned element.
+
+    Absolute Positioning:
+        An element with absolute positioning is taken out of the normal document flow.
+        Its position is then determined relative to its closest positioned ancestor (a parent element that also has positioning set). If there's no positioned ancestor, the element is positioned relative to the viewport (the browser window).
+        Other elements on the page will ignore the absolutely positioned element and may overlap with it.

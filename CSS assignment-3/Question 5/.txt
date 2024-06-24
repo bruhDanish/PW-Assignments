@@ -1,0 +1,22 @@
+In CSS, the z-index property controls the stacking order of positioned elements on a webpage. Imagine your webpage elements are layered on top of each other, like sheets of transparency on a projector. The z-index determines which element appears in front when they overlap.
+	Higher z-index values bring elements forward.
+    Lower z-index values push elements back.
+    Elements with the same z-index are stacked in the order they appear in the HTML code (the first one listed is considered "in front").
+
+
+    If we have a square image and some text that we want to overlap. By default, the text will be on top of the image since it's positioned later in the code (layers on top). To bring the image forward:
+
+
+        <div style="position: relative; width: 200px; height: 200px; background-color: red;">
+        </div>
+
+
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+        </p>
+
+
+    We've wrapped the image in a div and applied position: relative; to establish a stacking context (a reference point for z-index).
+    The text is positioned absolutely (position: absolute;) and centered with top, left, and transform.
+    We set z-index: 1; for the text, making it appear in front of the red square (which has an implicit z-index of 0).
+
+    z-index only works on positioned elements (elements with position set to something other than static).

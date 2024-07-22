@@ -1,0 +1,44 @@
+These properties are all essential tools for arranging and spacing elements within a Flexbox layout model. Here's a breakdown of what each one does:
+
+**justify-content:** 
+
+* Controls the alignment of all **flex items** along the **main axis**. This is the direction the flex items flow, typically horizontal (row) by default but can be vertical (column) with `flex-direction`.
+* Common values include:
+    * `flex-start`: Items align at the beginning of the container.
+    * `flex-end`: Items align at the end of the container.
+    * `center`: Items are centered along the main axis.
+    * `space-between`: Items are evenly distributed with space around them.
+    * `space-around`: Items are evenly distributed with space between them but not at the edges of the container.
+    * `space-evenly`: Similar to `space-around` but distributes space more evenly, including the edges.
+
+**align-items:**
+
+* Controls the alignment of all **flex items** along the **cross axis**. This is perpendicular to the main axis.
+* Common values include:
+    * `flex-start`: Items align at the top of the container (default for row) or left (default for column).
+    * `flex-end`: Items align at the bottom (row) or right (column).
+    * `center`: Items are centered along the cross axis.
+    * `stretch` (default for some browsers): Items stretch to fill the container's height along the cross axis.
+
+**gap:** (Shorthand for `row-gap` and `column-gap`)
+
+* Creates space between **flex items** along both the main and cross axes.
+* You can specify a single value for equal spacing or two values to define separate spacing for rows and columns.
+
+**flex-direction:**
+
+* Defines the **main axis** direction of the flex container.
+* Common values include:
+    * `row` (default): Main axis is horizontal, items arrange left to right.
+    * `column`: Main axis is vertical, items arrange top to bottom.
+    * `row-reverse`: Flex items are reversed in their order along the normal row direction.
+    * `column-reverse`: Flex items are reversed in their order along the normal column direction.
+
+**flex-wrap:**
+
+* Controls how **flex items** behave when they overflow the available space on the main axis.
+* Common values include:
+    * `nowrap` (default): Items do not wrap and overflow content is hidden.
+    * `wrap`: Items wrap onto multiple lines if necessary.
+    * `wrap-reverse`: Similar to `wrap` but wraps in the reverse order.
+    

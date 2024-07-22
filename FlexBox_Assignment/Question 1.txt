@@ -1,0 +1,21 @@
+The main differences between Flexbox and Grid layout models come down to dimensionality and focus:
+
+Dimensionality:
+    Flexbox: One-dimensional. Great for arranging items in a single row or column, with control over alignment and spacing. It excels at layouts that adapt to different screen sizes by changing the number of items on a row.
+    Grid: Two-dimensional. Perfect for creating complex layouts with rows and columns simultaneously. It provides more granular control over the placement of elements.
+
+Focus:
+    Flexbox: Alignment and one-dimensional distribution. Ideal for simple layouts like navigation bars, centering content, or aligning items in a form.
+    Grid: Overall structure and two-dimensional placement. Shines in creating complex layouts like dashboards, product galleries, or intricate web applications.
+
+
+When to use which:
+
+Use Flexbox for:
+    Simple, one-dimensional layouts with a focus on alignment and distribution.
+    Responsive layouts where the number of items in a row needs to adjust to screen size.
+    Aligning elements within a container.
+Use Grid Layout for:
+    Complex layouts requiring precise control over rows and columns.
+    Layouts with nested structures.
+    Layouts with areas of varying sizes.

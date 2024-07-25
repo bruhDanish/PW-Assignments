@@ -1,0 +1,71 @@
+grid-auto-row and grid-auto-column are properties in CSS Grid Layout that allows us to specify the size of rows and columns that are created implicitly (automatically) when content is placed outside the explicitly defined grid using grid-template-rows and grid-template-columns.
+
+_______________________________________________________________________________
+
+**grid-auto-row
+grid-auto-row controls the size of implicitly created rows in the grid.
+
+``css``
+    .grid-container {
+    display: grid;
+    grid-template-rows: 100px 100px; /* Explicitly defined rows */
+    grid-auto-rows: 50px; /* Implicitly created rows will be 50px tall */
+    }
+
+In this example:
+
+grid-template-rows: 100px 100px; explicitly defines two rows, each 100px tall.
+grid-auto-rows: 50px; specifies that any additional rows created beyond these two explicit rows will be 50px tall.
+
+_______________________________________________________________________________
+
+**grid-auto-column
+grid-auto-column controls the size of implicitly created columns in the grid.
+
+``css``
+    .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Explicitly defined columns */
+    grid-auto-columns: 100px; /* Implicitly created columns will be 100px wide */
+    }
+
+In this example:
+
+grid-template-columns: 1fr 2fr; explicitly defines two columns, where the first column takes up 1 fraction and the second column takes up 2 fractions.
+grid-auto-columns: 100px; specifies that any additional columns created beyond these two explicit columns will be 100px wide.
+
+_______________________________________________________________________________
+
+Example of Usage
+
+``html``
+    <div class="grid-container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    </div>
+
+``css``
+    .grid-container {
+    display: grid;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: 50px;
+    grid-auto-columns: 100px;
+    gap: 10px;
+    }
+
+    .item {
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid blue;
+    }
+
+In this setup:
+
+    The grid-template-rows and grid-template-columns define a 2x2 grid explicitly.
+
+    grid-auto-rows: 50px; and grid-auto-columns: 100px; specify that any additional rows will be 50px tall and any additional columns will be 100px wide.
+
+    The .item elements are placed into the grid. If there are more items than the explicitly defined grid can accommodate, additional rows and columns will be created as specified by grid-auto-rows and grid-auto-columns.

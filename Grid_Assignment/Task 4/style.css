@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    width: 80%;
+    height: 20%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.box{
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #ccc;
+}
+
+.box1, .box3, .box5, .box7{
+    background-color: #494949;
+}
+
+.box1, .box2{
+    grid-row: 2 / 2;
+}

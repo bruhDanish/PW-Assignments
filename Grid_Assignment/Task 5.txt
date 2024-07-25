@@ -1,0 +1,53 @@
+Both justify-items and justify-self are CSS properties used in CSS Grid Layout for aligning grid items along the horizontal axis (main axis). However, they apply to different levels within the grid structure:
+
+**justify-items
+    justify-items is a property that aligns all grid items within their respective grid cells along the inline axis (horizontal axis in a left-to-right layout).
+
+    ``css``
+        .grid-container {
+        display: grid;
+        grid-template-columns: 100px 100px;
+        justify-items: center; /* Aligns all grid items in the center horizontally */
+        }
+
+        .item {
+        background-color: lightblue;
+        padding: 10px;
+        border: 1px solid blue;
+        }
+
+    In this example:
+
+    grid-template-columns: 100px 100px; sets up a grid with two columns, each 100px wide.
+    justify-items: center; centers all grid items within their respective cells horizontally. This means each item will be centered within its column.
+
+_________________________________________________________________________________
+
+**justify-self
+    justify-self is a property that aligns an individual grid item within its grid cell along the inline axis.
+
+    ``css``
+
+        .grid-container {
+        display: grid;
+        grid-template-columns: 100px 100px;
+        }
+
+        .item {
+        background-color: lightblue;
+        padding: 10px;
+        border: 1px solid blue;
+        justify-self: end; /* Aligns this particular item to the end of its cell horizontally */
+        }
+
+    In this example:
+
+    grid-template-columns: 100px 100px; sets up a grid with two columns, each 100px wide.
+    .item is a grid item styled with justify-self: end;, which aligns it to the end of its grid cell horizontally. This means this particular item will be aligned to the right edge of its column.
+
+_________________________________________________________________________________
+
+*Key Differences
+    Scope: justify-items applies to all grid items within the grid container, aligning them within their respective grid cells.
+ 
+    Target: justify-self applies to individual grid items, allowing you to align each item differently within its own grid cell.
